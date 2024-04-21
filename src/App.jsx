@@ -133,47 +133,47 @@ function App() {
     // },
     {
       id:'First_education',
-      message:'You must be an Indian citizen',
+      message:'You must be the 1st person in your family to get degree',
       trigger:'Great'
     },
     {
       id:'Women_welfare',
-      message:'You must be an Indian citizen',
+      message:'Annual Income of women\'s Family must be lessthan 2.5L ',
       trigger:'Great'
     },
     {
       id:'Pongal_Bonus',
-      message:'You must be an Indian citizen',
+      message:'You must be an employee of Central Gov r State Gov',
       trigger:'Great'
     },
     {
       id:'Flood_fund',
-      message:'You must be an Indian citizen',
+      message:'Your house should be located in flood area',
       trigger:'Great'
     },
     {
       id:'Feild_fund',
-      message:'You must be an Indian citizen',
+      message:'Feild must be harvested',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_1',
-      message:'You must be an Indian citizen',
+      message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_2',
-      message:'You must be an Indian citizen',
+      message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_3',
-      message:'You must be an Indian citizen',
+      message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_4',
-      message:'You must be an Indian citizen',
+      message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     // {
