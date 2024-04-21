@@ -55,11 +55,11 @@ function App() {
     {
       id:'Schemes',
       options:[
-        {value:"First_education",label:"First_education",trigger:"First_education"},
-        {value:"Women_welfare",label:"Women_welfare",trigger:"Women_welfare"},
-        {value:"Pongal_Bonus",label:"Pongal_Bonus",trigger:"Pongal_Bonus"},
-        {value:"Flood_fund",label:"Flood_fund",trigger:"Flood_fund"},
-        {value:"Feild_fund",label:"Feild_fund",trigger:"Feild_fund"},
+        {value:"First_education",label:"First education",trigger:"First_education"},
+        {value:"Women_welfare",label:"Women welfare",trigger:"Women_welfare"},
+        {value:"Pongal_Bonus",label:"Pongal Bonus",trigger:"Pongal_Bonus"},
+        {value:"Flood_fund",label:"Flood fund",trigger:"Flood_fund"},
+        {value:"Feild_fund",label:"Feild fund",trigger:"Feild_fund"},
       ],
     },
     {
@@ -70,10 +70,10 @@ function App() {
     {
       id:'Application',
       options:[
-        {value:"TNPSC_group_1",label:"TNPSC_group_1",trigger:"TNPSC_group_1"},
-        {value:"TNPSC_group_2",label:"TNPSC_group_2",trigger:"TNPSC_group_2"},
-        {value:"TNPSC_group_3",label:"TNPSC_group_3",trigger:"TNPSC_group_3"},
-        {value:"TNPSC_group_4",label:"TNPSC_group_4",trigger:"TNPSC_group_4"},
+        {value:"TNPSC_group_1",label:"TNPSC group 1",trigger:"TNPSC_group_1"},
+        {value:"TNPSC_group_2",label:"TNPSC group 2",trigger:"TNPSC_group_2"},
+        {value:"TNPSC_group_3",label:"TNPSC group 3",trigger:"TNPSC_group_3"},
+        {value:"TNPSC_group_4",label:"TNPSC group 4",trigger:"TNPSC_group_4"},
       ],
     },
     // {
