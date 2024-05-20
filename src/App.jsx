@@ -8,10 +8,10 @@ function App() {
     {
       id:'intial',
       message:'Hello, Welcome to our website',
-      trigger:'Great'
+      trigger:'welcome'
     },
     {
-      id:'Great',
+      id:'welcome',
       message:'Please enter your name',
       trigger:'waiting1'
     },
@@ -59,7 +59,7 @@ function App() {
         {value:"Women_welfare",label:"Women welfare",trigger:"Women_welfare"},
         {value:"Pongal_Bonus",label:"Pongal Bonus",trigger:"Pongal_Bonus"},
         {value:"Flood_fund",label:"Flood fund",trigger:"Flood_fund"},
-        {value:"Feild_fund",label:"Feild fund",trigger:"Feild_fund"},
+        // {value:"Feild_fund",label:"Feild fund",trigger:"Feild_fund"},
       ],
     },
     {
@@ -70,10 +70,10 @@ function App() {
     {
       id:'Application',
       options:[
-        {value:"TNPSC_group_1",label:"TNPSC group 1",trigger:"TNPSC_group_1"},
-        {value:"TNPSC_group_2",label:"TNPSC group 2",trigger:"TNPSC_group_2"},
-        {value:"TNPSC_group_3",label:"TNPSC group 3",trigger:"TNPSC_group_3"},
-        {value:"TNPSC_group_4",label:"TNPSC group 4",trigger:"TNPSC_group_4"},
+        {value:"TNPSC_group_1",label:"TNPSC",trigger:"TNPSC_group_1"},
+        {value:"TNPSC_group_2",label:"IIT",trigger:"TNPSC_group_2"},
+        {value:"TNPSC_group_3",label:"NEET",trigger:"TNPSC_group_3"},
+        {value:"TNPSC_group_4",label:"UPSC",trigger:"TNPSC_group_4"},
       ],
     },
     // {
@@ -83,47 +83,81 @@ function App() {
     // },
     {
       id:'Aadhar_card',
-      message:'Enter your age',
-      trigger:'waiting2'
+      message:'You can apply or update your Aadhar card in this link',
+      trigger:'alink'
     },
     {
-      id:'waiting2',
-      user:true,
-      trigger:'step2'
+      id:'alink',
+      message:'https://uidai.gov.in/',
+      trigger:'Great'
     },
+    //   message:'Enter your age',
+    //   trigger:'waiting2'
+    // },
+    // {
+    //   id:'waiting2',
+    //   user:true,
+    //   trigger:'step2'
+    // },
     // {
     //   id:'age',
-    //   if(previousvalue >"18")
-    //   {
-    //     return(trigger:'step2')
-    //   }
-    //   else{
-    //     return(trigger:'No')
-    //   }
+    //   message:{previousvalue}>18 ? {trigger:'step2'}:{trigger:'Great'},
+    // },
+    // {
+    //   id:'step2';
+    //   message:{
+    //     if(previousvalue >"18")
+    //       {
+    //         return(trigger:'step3')
+    //       }
+    //       else{
+    //         return(trigger:'Great')
+    //       }    
+    //   }; 
+    // trigger:'step3' 
+    // }, 
+    // },
+    // {
+    //   id:'step3',
+    //   message:'You must be an Indian citizen',
+    //   trigger:'Great'
+    // },
+    // {
+    //   id:'No',
+    //   message:'Your not eligible',
+    //   trigger:'Great'
     // },
     {
-      id:'step2',
-      message:'You must be an Indian citizen',
-      trigger:'Great'
-    },
-    {
-      id:'No',
-      message:'Your not eligible',
-      trigger:'Great'
-    },
-    {
       id:'Pan_card',
-      message:'You must be an Indian citizen',
+      message:'You can apply pan card throught this link',
+      trigger:'plink'
+    },
+    {
+      id:'plink',
+      message:"https://www.pan.utiitsl.com/PAN/newA.html",
+      // message:'You must be an Indian citizen',
       trigger:'Great'
     },
     {
       id:'Voter_ID',
-      message:'You must be an Indian citizen with age above 18',
+      message:'You can apply new voter id throught this link',
+      trigger:'vlink'
+    },
+    {
+      id:'vlink',
+      message:'https://voters.eci.gov.in/',
+      // message:'You must be an Indian citizen with age above 18',
       trigger:'Great'
     },
     {
       id:'Driving_License',
-      message:'You must be an Indian citizen with age above 18',
+      message:'You can driving license throught this link',
+      trigger:'dlink'
+    },
+    {
+      id:'dlink',
+      message:'https://parivahan.gov.in/parivahan//en/content/driving-licence-0',
+      // message:'You must be an Indian citizen with age above 18',
       trigger:'Great'
     },
     // {
@@ -133,47 +167,95 @@ function App() {
     // },
     {
       id:'First_education',
-      message:'You must be the 1st person in your family to get degree',
+      message:'You can apply for this scheme through this link',
+      trigger:'flink'
+    },
+    {
+      id:'flink',
+      message:'https://www.tnesevai.tn.gov.in/Default.aspx',
+      // message:'You must be the 1st person in your family to get degree',
       trigger:'Great'
     },
     {
       id:'Women_welfare',
-      message:'Annual Income of women\'s Family must be lessthan 2.5L ',
+      message:'You can apply for this scheme through this link',
+      trigger:'wlink'
+    },
+    {
+      id:'wlink',
+      message:'https://tnsocialwelfare.tn.gov.in/en',
+      // message:'Annual Income of women\'s Family must be lessthan 2.5L ',
       trigger:'Great'
     },
     {
       id:'Pongal_Bonus',
-      message:'You must be an employee of Central Gov r State Gov',
+      message:'It\'s currently closed ',
+      // message:'You must be an employee of Central Gov r State Gov',
       trigger:'Great'
     },
     {
       id:'Flood_fund',
-      message:'Your house should be located in flood area',
-      trigger:'Great'
+      message:'Enter Your area to check whether the scheme is applicable or not',
+      trigger:'fwaiting'
     },
     {
-      id:'Feild_fund',
-      message:'Feild must be harvested',
+      id:'fwaiting',
+      user:true,
+      trigger:'fcheck'
+    },
+    {
+      id:'fcheck',
+      message:'Your area {previousValue} is not updated in the list so please check sometimes later',
+      // message:'Your house should be located in flood area',
       trigger:'Great'
     },
+    // {
+    //   id:'Feild_fund',
+    //   message:'Feild must be harvested',
+    //   trigger:'Great'
+    // },
     {
       id:'TNPSC_group_1',
-      message:'You must be an Indian citizen with age above 21',
+      message:'You can apply for this exam through this link',
+      trigger:'tlink',
+    },
+    {
+      id:'tlink',
+      message:'https://www.tnpsc.gov.in/',
+      // message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_2',
-      message:'You must be an Indian citizen with age above 21',
+      message:'You can apply for this exam through this link',
+      trigger:'ilink'
+    },
+    {
+      id:'ilink',
+      message:'https://jeemain.nta.ac.in/',
+      // message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_3',
-      message:'You must be an Indian citizen with age above 21',
+      message:'You can apply for this exam through this link',
+      trigger:'nlink'
+    },
+    {
+      id:'nlink',
+      message:'https://neet.nta.nic.in/',
+      // message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     {
       id:'TNPSC_group_4',
-      message:'You must be an Indian citizen with age above 21',
+      message:'You can apply for this exam throught this link',
+      trigger:'ulink'
+    },
+    {
+      id:'ulink',
+      message:'https://upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202024',
+      // message:'You must be an Indian citizen with age above 21',
       trigger:'Great'
     },
     // {
@@ -181,6 +263,26 @@ function App() {
     //   message:'Thank you',
     //   trigger:'Great'
     // },
+    {
+      id:'Great',
+      message:'Thank you for using our chatbot',
+      trigger:'waiting3'
+    },
+    {
+      id:'waiting3',
+      message:'If you want to continue please enter Yes r s',
+      trigger:'waiting4'
+    },
+    {
+      id:'waiting4',
+      user:true,
+      trigger:'final'
+    },
+    {
+      id:'final',
+      message:'Once again welcome',
+      trigger:'request'
+    },
   ]
 
   return (
