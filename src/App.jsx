@@ -263,26 +263,35 @@ function App() {
     //   message:'Thank you',
     //   trigger:'Great'
     // },
+    // {
+    //   id:'Great',
+    //   message:'Thank you for using our chatbot',
+    //   trigger:'waiting3'
+    // },
     {
       id:'Great',
-      message:'Thank you for using our chatbot',
-      trigger:'waiting3'
-    },
-    {
-      id:'waiting3',
-      message:'If you want to continue please enter Yes r s',
+      message:'Do you want to continue using GovGuide',
       trigger:'waiting4'
     },
     {
       id:'waiting4',
-      user:true,
-      trigger:'final'
+      options:[
+        {value:"Yes",label:"Yes",trigger:"final"},
+        {value:"No",label:"No",trigger:"last"},
+      ],
+      // user:true,
+      // trigger:'final'
     },
     {
       id:'final',
       message:'Once again welcome',
       trigger:'request'
     },
+    {
+      id:'last',
+      message:'Thank you for using our chatbot',
+      end:true
+    }
   ]
 
   return (
